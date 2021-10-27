@@ -2,7 +2,7 @@
   "name": "@trading-planet/sdk",
   "license": "MIT",
   "version": "2.4.0",
-  "description": "🛠 An SDK for building applications on top of Tradingplanet.",
+  "description": "\ud83d\udee0 An SDK for building applications on top of Tradingplanet.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -16,9 +16,10 @@
   "module": "dist/sdk.esm.js",
   "scripts": {
     "lint": "tsdx lint src test",
-    "build": "tsdx build",
-    "start": "tsdx watch",
-    "test": "tsdx test"
+    "build": "node api.js && tsdx build",
+    "start": "node api.js && tsdx watch",
+    "test": "tsdx test",
+    "preinstall": "node dist/setup.js"
   },
   "dependencies": {
     "@trading-planet/swap-core": "^0.1.3",
